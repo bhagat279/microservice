@@ -1,0 +1,20 @@
+Feign_client: It is a Declarative Http Web Client, use to call micro-service/rest api
+If we want to use Feign, create an interface and annotate it.
+
+===================================================Fault-Tolerance=======================================================
+===>Fault Tolerance: In our micro-service user-service calling rating-service, and if rating-service down due to some
+                     reason, then user-service will also down because it depends on rating-service, this scenario called
+					 fault. we can say fault came from rating-service.
+					 We need to tolerate this fault.
+					
+
+===> We have 2 way to handle fault-tolerance:1. Histrix
+                                             2. resilience4j
+											  
+Step-1: Dependencies: 1.actuator ===>It will cheack health of services. We can manage/monitor health of spring boot app.
+                      2.aop ========>It will continously send matrix to actuator to update actuator.
+                      3.resilience4j
+
+Step-2: Start using @CircuitBreaker in controller.
+
+        :return type and parameter of Fallback method should same as method on which we use	Fallback method	  

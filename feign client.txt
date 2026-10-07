@@ -1,0 +1,7 @@
+Feign_client: It is a Declarative Http Web Client, use to call micro-service/rest api
+If we want to use Feign, create an interface and annotate it.
+
+
+===>Fault Tolerance: In our micro-service user-service calling rating-service, and if rating-service down due to some
+                     reason, then user-service will also down because it depends on rating-service, this scenario called
+					 fault. we can say fault came from rating-service.
